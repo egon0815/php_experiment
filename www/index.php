@@ -1,3 +1,8 @@
+<?php
+include "config.inc.php";
+include "database.php";
+
+?>
 <!DOCTYPE HTML>
 <html lang="de" >
 <head>
@@ -12,7 +17,7 @@
 	
 $(document).ready( function(event) {
 
-	anzahlInListe=localStorage.length;
+	anzahlInListe=<?php get_anzahl()?>;
 	
   $('div#p1').on('pagebeforeshow',function(event, ui){
 		berechneBAK();
